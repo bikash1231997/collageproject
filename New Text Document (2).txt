@@ -1,0 +1,17 @@
+String sql = "insert into city values  (?,?,?,?,?);";
+
+preparedStatement = connection.prepareStatement(sql);
+			preparedStatement.setInt(1, 5000);
+			preparedStatement.setString(2, "Bangalore");
+			preparedStatement.setString(3, "IND");
+			preparedStatement.setString(4, "Karnataka");
+			preparedStatement.setInt(5, 20000);
+
+int numberOfRowsInerted = preparedStatement.executeUpdate();
+
+			System.out.println("numberOfRowsInerted : " + numberOfRowsInerted);
+
+			System.out.println("5000th row has been inserted in city table");
+
+
+

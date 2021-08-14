@@ -1,0 +1,38 @@
+1. Create one new table in Microsoft access named  stu, filename std
+2. Goto Control Panel
+3. Goto Administrative Tools
+4.Goto DataSourses ODBC
+5. CLick on System DSN
+6. Click Add
+7. Select *.mdb
+8. Give one dsn name as "dsn"
+9. Click Save and OK
+
+10. Then add this code in your school.java
+
+
+2B8WP-NCG6D-8JQMM-9JWXY-HVB9Q
+
+
+import java.sql.*;
+
+try{
+Class.forName("sun.jdbc.odbc.JdbcOdbcDriver");
+con=DriverManager.getConnection("jdbc:odbc:dsn"); 
+st=con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE,ResultSet.CONCUR_UPDATABLE);
+rs=st.executeQuery("Select * from std");
+rs.next();
+}catch(Exception e)
+{}
+
+
+
+s1=t1.getText(); 
+s2=t2.getText();
+s3=t3.getText(); 
+n1=Integer.parseInt(s1);
+n2=Integer.parseInt(s3);
+
+st.executeUpdate("Insert in to std values("+n1+",'"+s2+"',"+n2+")"); 
+
+rs.next();

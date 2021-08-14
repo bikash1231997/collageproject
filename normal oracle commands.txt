@@ -1,0 +1,39 @@
+create table customerdetails (accno number not null, custname varchar2(50) not null, custaddr varchar2(50) not null, custcity varchar2(50) not null, custcontact number not null, unitconsumed number not null, unitprice number not null, paid number not null, billDate varchar2(50) not null, billAmt number not null, primary key(accno) );
+insert data into oracle    INSERT INTO users VALUES('admin1', 'admin1',0);
+
+insert into customerdetails values ("1230","bikash","dmj","dmj","9348795026","10","20","yes","102020","400");//oracle direct entry pain "" replace re '' rahiba
+insert into customerdetails values ( '1230' , 'bikash' , 'dmj' , 'dmja' , '9348795026' , '10p' ,'2p0' , 'yes' , '1020k' , '40p' ,  ' ');
+
+update a record in oracle sql
+UPDATE users SET name = 'admin' WHERE username = 'bikash'; 
+
+addingnew row
+	alter table table_name add colname varchar(70)
+
+delete all rows
+	delete from customerdetails;
+
+alter a data type
+alter table customerdetails modify CUSTCONTACT VARCHAR2(10);
+
+
+
+Drop a column from a table
+ALTER TABLE table_name DROP COLUMN column_name
+
+
+
+Insert data jdbc in oracle 
+
+String qu2= "insert into customerdetails (accno, custname, custaddr, custcity, custcontact, unitconsumed, unitprice, paid, billDate, billAmt)" + "values ('"+account2+"','"+custname+"','"+address+"','"+cityName+"','"+contactno+"','"+unitC+"','"+unitP+"','"+paidStatus+"','"+dateB1+"','"+t2+"')";
+
+
+
+String q2 ="UPDATE customerdetails SET UNITCONSUMED = ? , UNITPRICE = ? , PAID = ? WHERE ACCNO= ?";
+PreparedStatement pst2=con.prepareStatement(q2); 
+pst2.setString(1, unitC);
+pst2.setString(2, unitP);
+pst2.setString(3, paidStatus);
+pst2.setString(4, account2);
+int row = pst2.executeUpdate();
+System.out.println(String.format("Row affected %d", row));
